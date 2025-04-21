@@ -31,6 +31,7 @@ export default function Header() {
           </div>
           <Menu />
         </div>
+        {/* for small device */}
         <div className='md:hidden block py-2'>
           <Search />
         </div>
