@@ -3,6 +3,7 @@ import './globals.css'
 
 import { APP_DESCRIPTION, APP_NAME, APP_SLOGAN } from '@/lib/constants'
 import Header from '@/components/shared/header'
+import ClientProviders from '@/components/shared/client-providers'
 export const metadata: Metadata = {
   title: {
     template: `%s | ${APP_NAME}`,
@@ -17,7 +18,7 @@ export default function RootLayout({
     <html lang='en'>
       <body>
         <Header />
-        {children}
+        <ClientProviders>{children}</ClientProviders>
       </body>
     </html>
   )
