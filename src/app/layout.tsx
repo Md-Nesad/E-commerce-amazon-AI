@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import './globals.css'
 
 import { APP_DESCRIPTION, APP_NAME, APP_SLOGAN } from '@/lib/constants'
+import Header from '@/components/shared/header'
 export const metadata: Metadata = {
   title: {
     template: `%s | ${APP_NAME}`,
@@ -14,7 +15,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang='en'>
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }
