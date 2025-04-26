@@ -22,7 +22,7 @@ export default async function UserButton() {
         <DropdownMenuTrigger className='header-button' asChild>
           <div className='flex items-center'>
             <div className='flex flex-col text-xs text-left'>
-              <span>Hello, {session ? session.user.name : 'sign in'}</span>
+              <span>Hello, {session ? session?.user?.name : 'sign in'}</span>
               <span className='font-bold'>Account & Orders</span>
             </div>
             <ChevronDown />
@@ -33,10 +33,10 @@ export default async function UserButton() {
             <DropdownMenuLabel className='font-normal'>
               <div className='flex flex-col space-y-1'>
                 <p className='text-sm font-medium leading-none'>
-                  {session.user.name}
+                  {session?.user?.name}
                 </p>
                 <p className='text-xs leading-none text-muted-foreground'>
-                  {session.user.email}
+                  {session?.user?.email}
                 </p>
               </div>
             </DropdownMenuLabel>
@@ -48,7 +48,7 @@ export default async function UserButton() {
                 <DropdownMenuItem>Your orders</DropdownMenuItem>
               </Link>
 
-              {session.user.role === 'Admin' && (
+              {session?.user?.role === 'Admin' && (
                 <Link className='w-full' href='/admin/overview'>
                   <DropdownMenuItem>Admin</DropdownMenuItem>
                 </Link>
