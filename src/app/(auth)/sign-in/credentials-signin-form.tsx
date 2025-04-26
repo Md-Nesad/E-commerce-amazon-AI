@@ -1,6 +1,5 @@
 'use client'
 import { redirect, useSearchParams } from 'next/navigation'
-
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import Link from 'next/link'
@@ -15,7 +14,6 @@ import {
 import { useForm } from 'react-hook-form'
 import { IUserSignIn } from 'types'
 import { signInWithCredentials } from '@/lib/actions/user.actions'
-
 import { toast } from '@/hooks/use-toast'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { UserSignInSchema } from '@/lib/validator'
