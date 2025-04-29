@@ -1,13 +1,12 @@
 import CartButton from './car-button'
 import UserButton from './user-button'
 
-export default function Menu() {
+export default function Menu({ forAdmin = false }: { forAdmin?: boolean }) {
   return (
     <div className='flex justify-end'>
-      <nav className='flex gap-3 w-full items-center'>
+      <nav className='hidden md:flex gap-3 w-full'>
         <UserButton />
-
-        <CartButton />
+        {forAdmin ? null : <CartButton />}
       </nav>
     </div>
   )

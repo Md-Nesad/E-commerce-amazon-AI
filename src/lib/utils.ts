@@ -190,3 +190,7 @@ export const getFilterUrl = ({
   if (sort) newParams.sort = sort
   return `/search?${new URLSearchParams(newParams).toString()}`
 }
+
+export function formatId(id: string) {
+  return `..${id.substring(id.length - 6)}`
+}

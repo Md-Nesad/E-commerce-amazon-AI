@@ -169,7 +169,7 @@ export default function ReviewList({
                 <Button
                   onClick={handleOpenForm}
                   variant='outline'
-                  className=' rounded-full w-full'
+                  className=' rounded-full w-full dark:text-white dark:bg-black'
                 >
                   Write a customer review
                 </Button>
