@@ -13,7 +13,7 @@ import {
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 
-export default function HomeCarousel({
+export function HomeCarousel({
   items,
 }: {
   items: {

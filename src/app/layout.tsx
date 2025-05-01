@@ -2,8 +2,6 @@ import { Metadata } from 'next'
 import './globals.css'
 
 import { APP_DESCRIPTION, APP_NAME, APP_SLOGAN } from '@/lib/constants'
-import Header from '@/components/shared/header'
-import ClientProviders from '@/components/shared/client-providers'
 export const metadata: Metadata = {
   title: {
     template: `%s | ${APP_NAME}`,
@@ -11,15 +9,11 @@ export const metadata: Metadata = {
   },
   description: APP_DESCRIPTION,
 }
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
+
+export default function RootLayout({ children }) {
   return (
-    <html lang='en' suppressHydrationWarning>
-      <body>
-        <Header />
-        <ClientProviders>{children}</ClientProviders>
-      </body>
+    <html lang='en'>
+      <body>{children}</body>
     </html>
   )
 }

@@ -1,12 +1,17 @@
-import CartButton from './car-button'
-import UserButton from './user-button'
+import { UserIcon } from 'lucide-react'
+import Link from 'next/link'
+import CartButton from './cart-button'
 
-export default function Menu({ forAdmin = false }: { forAdmin?: boolean }) {
+export default function Menu() {
   return (
     <div className='flex justify-end'>
-      <nav className='hidden md:flex gap-3 w-full'>
-        <UserButton />
-        {forAdmin ? null : <CartButton />}
+      <nav className='flex gap-3 w-full'>
+        <Link href='/cart' className='header-button'>
+          <UserIcon className='h-8 w-8' />
+          <span className='font-bold'>Sign in</span>
+        </Link>
+
+        <CartButton />
       </nav>
     </div>
   )
